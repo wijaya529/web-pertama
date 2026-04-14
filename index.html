@@ -60,9 +60,34 @@
    <p id="welcome"></p>
 
 <script>
+ <script>
   document.getElementById("welcome").innerText =
     "Selamat datang di Prasetyo Capital 🔥";
-</script>
 
-</body>
-</html>
+  // bikin tombol
+  const visitBtn = document.createElement("button");
+  visitBtn.innerText = "Visit";
+
+  const joinBtn = document.createElement("button");
+  joinBtn.innerText = "Join";
+
+  // styling dikit biar gak jelek
+  visitBtn.style.margin = "10px";
+  visitBtn.style.padding = "10px 20px";
+
+  joinBtn.style.margin = "10px";
+  joinBtn.style.padding = "10px 20px";
+
+  // fungsi tombol
+  visitBtn.onclick = function () {
+    window.location.href = "https://google.com"; // ganti link lu
+  };
+
+  joinBtn.onclick = function () {
+    alert("Join dulu bro 🚀");
+  };
+
+  // masukin ke halaman
+  document.body.appendChild(visitBtn);
+  document.body.appendChild(joinBtn);
+</script>
