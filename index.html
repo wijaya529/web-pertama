@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prasetyo Seaseon</title>
-  
+  <title>Prasetyo Season</title>
+
   <style>
     body {
       margin: 0;
@@ -37,6 +37,25 @@
       font-size: 18px;
     }
 
+    /* tombol (dipindah ke CSS biar rapi) */
+    button {
+      margin: 10px;
+      padding: 15px 40px;
+      font-size: 20px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #00c6ff;
+    }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -48,22 +67,23 @@
       }
     }
   </style>
-  
+
 </head>
 <body>
 
   <div class="container">
     <img src="logo.png" alt="Logo">
-    
+
     <div class="owl">7</div>
-    <h1>PRASETYO SEASON </h1>
+    <h1>PRASETYO SEASON</h1>
     <p>Modern • Mysterious • Powerful</p>
+
     <p id="welcome"></p>
-<div id="buttons"></div>
+    <div id="buttons"></div>
   </div>
 
 <script>
-
+  // teks welcome
   document.getElementById("welcome").innerText =
     "Selamat datang di Prasetyo Capital 🔥";
 
@@ -74,27 +94,9 @@
   const joinBtn = document.createElement("button");
   joinBtn.innerText = "Join";
 
-  // styling dikit biar gak jelek
- visitBtn.style.margin = "10px";
-visitBtn.style.padding = "15px 40px";
-visitBtn.style.fontSize = "20px";
-visitBtn.style.fontWeight = "bold";
-visitBtn.style.background = "linear-gradient(135deg, #007bff, #00c6ff)";
-visitBtn.style.color = "white";
-visitBtn.style.border = "none";
-visitBtn.style.borderRadius = "30px";
-
-joinBtn.style.margin = "10px";
-joinBtn.style.padding = "15px 40px";
-joinBtn.style.fontSize = "20px";
-joinBtn.style.fontWeight = "bold";
-joinBtn.style.background = "linear-gradient(135deg, #007bff, #00c6ff)";
-joinBtn.style.color = "white";
-joinBtn.style.border = "none";
-joinBtn.style.borderRadius = "30px";
   // fungsi tombol
   visitBtn.onclick = function () {
-    window.location.href = "https://www.instagram.com/heri_529?igsh=dTFzMDVkaGRkbW1k"; // ganti link lu
+    window.location.href = "https://www.instagram.com/heri_529?igsh=dTFzMDVkaGRkbW1k";
   };
 
   joinBtn.onclick = function () {
@@ -102,6 +104,10 @@ joinBtn.style.borderRadius = "30px";
   };
 
   // masukin ke halaman
- document.getElementById("buttons").appendChild(visitBtn);
-document.getElementById("buttons").appendChild(joinBtn);
+  const buttonContainer = document.getElementById("buttons");
+  buttonContainer.appendChild(visitBtn);
+  buttonContainer.appendChild(joinBtn);
 </script>
+
+</body>
+</html>
