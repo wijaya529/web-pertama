@@ -1,21 +1,7 @@
+<!DOCTYPE html>
+<html>
 <head>
   <title>Prasetyo Season</title>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <video autoplay muted loop class="logo-video">
-      <source src="logo.mp4" type="video/mp4">
-    </video>
-
-    <div class="owl">7</div>
-    <h1>PRASETYO SEASON</h1>
-
-  </div>
-
-</body>
 
   <style>
     body {
@@ -51,7 +37,13 @@
       font-size: 26px;
     }
 
-    /* tombol (dipindah ke CSS biar rapi) */
+    .logo-video {
+      width: 220px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 20px #00c6ff);
+    }
+
     button {
       margin: 10px;
       padding: 15px 40px;
@@ -81,34 +73,39 @@
       }
     }
   </style>
-
 </head>
+
 <body>
 
   <div class="container">
-    <img src="logo.png" alt="Logo">
+
+    <!-- LOGO VIDEO (SUDAH GANTI DARI IMG) -->
+    <video autoplay muted loop class="logo-video">
+      <source src="logo.mp4" type="video/mp4">
+    </video>
 
     <div class="owl">7</div>
+
     <h1>PRASETYO SEASON</h1>
+
     <p>Bangun personal branding yang kuat dan dikenal luas bersama kami</p>
 
     <p id="welcome"></p>
+
     <div id="buttons"></div>
+
   </div>
 
 <script>
-  // teks welcome
   document.getElementById("welcome").innerText =
     "Selamat datang di Prasetyo Season";
 
-  // bikin tombol
   const visitBtn = document.createElement("button");
   visitBtn.innerText = "Visit";
 
   const joinBtn = document.createElement("button");
   joinBtn.innerText = "Join";
 
-  // fungsi tombol
   visitBtn.onclick = function () {
     window.location.href = "https://www.instagram.com/heri_529?igsh=dTFzMDVkaGRkbW1k";
   };
@@ -117,7 +114,6 @@
     alert("Join dulu bro 🚀");
   };
 
-  // masukin ke halaman
   const buttonContainer = document.getElementById("buttons");
   buttonContainer.appendChild(visitBtn);
   buttonContainer.appendChild(joinBtn);
