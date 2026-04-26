@@ -2,19 +2,45 @@
 <html>
 <head>
   <title>Prasetyo Season</title>
-    <link rel="icon" type="image/png" href="logo.png">
-
+  <link rel="icon" type="image/png" href="logo.png">
 
   <style>
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* PROJEKC pojok KIRI BAWAH */
+    .projek-box {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      text-align: left;
+      z-index: 10;
+    }
+
+    .projek-box h2 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: #00c6ff;
+      letter-spacing: 2px;
+    }
+
+    .projek-box p {
+      margin: 5px 0;
+      color: #aaa;
+      font-size: 16px;
+    }
+
+    /* Konten tengah */
+    .center-wrapper {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, sans-serif;
-      color: white;
       text-align: center;
     }
 
@@ -26,12 +52,6 @@
       font-size: 50px;
       letter-spacing: 3px;
       margin-bottom: 20px;
-    }
-
-    .owl {
-      font-size: 80px;
-      margin: 20px 0;
-      filter: drop-shadow(0 0 15px #00ffff);
     }
 
     p {
@@ -64,74 +84,62 @@
       box-shadow: 0 0 20px #00c6ff;
     }
 
+    /* OUR WEBSITE pojok KANAN BAWAH */
+    .website-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      text-align: right;
+      z-index: 10;
+    }
+
+    .website-box h2 {
+      margin: 0 0 10px 0;
+      font-size: 22px;
+      color: #00c6ff;
+      letter-spacing: 2px;
+    }
+
+    .website-box p {
+      margin: 5px 0;
+      color: #aaa;
+      font-size: 16px;
+    }
+
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-
-    <!-- LOGO VIDEO (SUDAH GANTI DARI IMG) -->
-    <video autoplay muted loop class="logo-video">
-      <source src="logo.mp4" type="video/mp4">
-    </video>
-
-    <div class="owl">7</div>
-
-    <h1>PRASETYO SEASON</h1>
-
-    <p>KLIK BAWAH ITU BRO</p>
-
-    <p id="welcome"></p>
-
-    <div id="buttons"></div>
-
+  <!-- PROJEKC di KIRI BAWAH -->
+  <div class="projek-box">
+    <h2>PROJEKC</h2>
+    <p>SPEKTER AGNECY</p>
+    <p>ARC</p>
+    <p>IOPN NETWORK</p>
   </div>
 
-<div style="text-align: left; display: inline-block;">
-  <h2>PROJEKC</h2>
-  <p>SPEKTER AGNECY</p>
-  <p>ARC</p>
-  <p>IOPN NETWORK</p>
+  <!-- Konten utama di tengah -->
+  <div class="center-wrapper">
+    <div class="container">
+      <h1>7</h1>
+      <h1>PRASETYO SEASON</h1>
+      <p>KLIK BAWAH ITU BRO</p>
+      <p>Selamat datang di Prasetyo Season</p>
+      <button>Visit</button>
+      <button>Join</button>
+    </div>
+  </div>
 
-  <H2>OUR WEBSITE </H2>
-  <p>JUS SEGAR </p>
-  <P>SHAFIRA HIJAB</P>
-</div>
-
-
-<script>
-  document.getElementById("welcome").innerText =
-    "Selamat datang di Prasetyo Season";
-
-  const visitBtn = document.createElement("button");
-  visitBtn.innerText = "Visit";
-
-  const joinBtn = document.createElement("button");
-  joinBtn.innerText = "Join";
-
-  visitBtn.onclick = function () {
-    window.location.href = "https://www.instagram.com/heri_529?igsh=dTFzMDVkaGRkbW1k";
-  };
-
-  joinBtn.onclick = function () {
-    alert("Join dulu bro 🚀");
-  };
-
-  const buttonContainer = document.getElementById("buttons");
-  buttonContainer.appendChild(visitBtn);
-  buttonContainer.appendChild(joinBtn);
-</script>
+  <!-- OUR WEBSITE di KANAN BAWAH -->
+  <div class="website-box">
+    <h2>OUR WEBSITE</h2>
+    <p>JUS SEGAR</p>
+    <p>SHAFIRA HIJAB</p>
+  </div>
 
 </body>
 </html>
